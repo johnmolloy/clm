@@ -1,0 +1,4 @@
+clm_mfr:
+    resource: "@CLMMfrBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,3 @@
+clm_mfr_homepage:
+    pattern:  /cars/{mfrname}
+    defaults: { _controller: CLMMfrBundle:Default:index }
