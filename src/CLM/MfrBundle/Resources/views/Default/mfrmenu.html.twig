@@ -1,6 +1,7 @@
 <div class = "manufacturerNav">
 <ul class="nav col-sm-2">
 	{% for mfr in manufacturers %}
-		<li><a href="/cars/{{ mfr.mfrName }}">{{ mfr.mfrName }}</a></li>
+        <li><a href="{{ path('clm_mfr_homepage', {'mfrname': mfr.mfrName}) }}">{{ mfr.mfrName }}</a></li>
 	{% endfor %}
 </ul></div>
+

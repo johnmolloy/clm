@@ -1,5 +1,5 @@
 clm_mfr_information:
-    pattern:  /cars/information/{mfrname}
+    pattern:  /cars/{mfrname}/information
     defaults: { _controller: CLMMfrBundle:Default:mfrInformation }
 
 clm_mfr_homepage:
