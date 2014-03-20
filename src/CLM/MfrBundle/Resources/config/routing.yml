@@ -1,3 +1,15 @@
+clm_mfr_information:
+    pattern:  /cars/information/{mfrname}
+    defaults: { _controller: CLMMfrBundle:Default:mfrInformation }
+
 clm_mfr_homepage:
     pattern:  /cars/{mfrname}
     defaults: { _controller: CLMMfrBundle:Default:index }
+
+clm_create_mfr:
+    pattern:  /createmfr
+    defaults: { _controller: CLMMfrBundle:Default:create }
+
+clm_mfr_menu:
+    pattern:  /mfrmenu
+    defaults: { _controller: CLMMfrBundle:Default:mfrmenu }
