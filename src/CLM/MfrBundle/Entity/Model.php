@@ -29,13 +29,6 @@ class Model
     private $name;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="mfrName", type="string", length=30)
-     */
-    private $mfrName;
-
-    /**
      * @var integer
      *
      * @ORM\Column(name="mfrID", type="smallint")
@@ -88,29 +81,6 @@ class Model
     public function getName()
     {
         return $this->name;
-    }
-
-    /**
-     * Set mfrName
-     *
-     * @param string $mfrName
-     * @return Model
-     */
-    public function setMfrName($mfrName)
-    {
-        $this->mfrName = $mfrName;
-
-        return $this;
-    }
-
-    /**
-     * Get mfrName
-     *
-     * @return string 
-     */
-    public function getMfrName()
-    {
-        return $this->mfrName;
     }
 
     /**
