@@ -1,8 +1,10 @@
+{{ render(controller('CLMMfrBundle:Default:mfrmenu')) }}
+
 Manufacturer: {{ mfrname }}
 </br>
 Description:  {{ description }}
 </br>
-Website:      {{ website }}
+Website:      <a href="{{ website }}">{{ website }}</a>
 </br>
 Contact Number:  {{ contactNumber }}
 </br>
