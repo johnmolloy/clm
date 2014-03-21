@@ -25,7 +25,7 @@ class DefaultController extends Controller
 				'No manufacturer '.$mfrname.' found'
 			);
 		}
-        return $this->render('CLMMfrBundle:Manufacturer:information.html.twig', array('mfrname' => $manufacturer->getMfrName(), 'description' => $manufacturer->getDescription(), 'website' => $manufacturer->getWebsite(), 'contactNumber' => $manufacturer->getContactNumber(), 'recoveryTelNumber' => $manufacturer->getRecoveryTelNumber(), 'logoPath' => $manufacturer->getLogoPath()));
+        return $this->render('CLMMfrBundle:Manufacturer:information.html.twig', array('mfrid' => $manufacturer->getId(), 'mfrname' => $manufacturer->getMfrName(), 'description' => $manufacturer->getDescription(), 'website' => $manufacturer->getWebsite(), 'contactNumber' => $manufacturer->getContactNumber(), 'recoveryTelNumber' => $manufacturer->getRecoveryTelNumber(), 'logoPath' => $manufacturer->getLogoPath()));
     }
 	
 	public function mfrMenuAction()

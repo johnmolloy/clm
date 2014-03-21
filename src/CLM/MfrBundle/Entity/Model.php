@@ -29,9 +29,7 @@ class Model
     private $name;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="mfrID", type="smallint")
+	 * @ORM\ManyToOne(targetEntity="Manufacturer")
      */
     private $mfrID;
 
@@ -48,6 +46,8 @@ class Model
      * @ORM\Column(name="picturePath", type="string", length=20)
      */
     private $picturePath;
+
+
 
 
     /**
@@ -81,29 +81,6 @@ class Model
     public function getName()
     {
         return $this->name;
-    }
-
-    /**
-     * Set mfrID
-     *
-     * @param integer $mfrID
-     * @return Model
-     */
-    public function setMfrID($mfrID)
-    {
-        $this->mfrID = $mfrID;
-
-        return $this;
-    }
-
-    /**
-     * Get mfrID
-     *
-     * @return integer 
-     */
-    public function getMfrID()
-    {
-        return $this->mfrID;
     }
 
     /**
@@ -150,5 +127,28 @@ class Model
     public function getPicturePath()
     {
         return $this->picturePath;
+    }
+
+    /**
+     * Set mfrID
+     *
+     * @param \CLM\MfrBundle\Entity\Manufacturer $mfrID
+     * @return Model
+     */
+    public function setMfrID(\CLM\MfrBundle\Entity\Manufacturer $mfrID = null)
+    {
+        $this->mfrID = $mfrID;
+
+        return $this;
+    }
+
+    /**
+     * Get mfrID
+     *
+     * @return \CLM\MfrBundle\Entity\Manufacturer 
+     */
+    public function getMfrID()
+    {
+        return $this->mfrID;
     }
 }
