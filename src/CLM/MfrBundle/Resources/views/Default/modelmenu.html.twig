@@ -1,0 +1,6 @@
+<div class = "modelNav">
+<ul class="nav col-sm-6">
+	{% for model in models %}
+		<li><a href="{{ path('clm_model_homepage', {'mfrname': manufacturer.mfrName, 'model': model.name}) }}">{{ model.name }}</a></li>
+	{% endfor %}
+</ul></div>

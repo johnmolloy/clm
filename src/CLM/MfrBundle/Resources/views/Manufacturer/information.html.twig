@@ -1,16 +1,24 @@
-{{ render(controller('CLMMfrBundle:Default:mfrmenu')) }}
+{% extends '::base.html.twig' %}
 
-Id: {{ mfrid }}
-</br>
-Manufacturer: {{ mfrname }}
-</br>
-Description:  {{ description }}
-</br>
-Website:      <a href="{{ website }}">{{ website }}</a>
-</br>
-Contact Number:  {{ contactNumber }}
-</br>
-Recovery Number: {{ recoveryTelNumber }}
-</br>
-Logo:  {{ logoPath }}
-</br>
+{% block body %}
+{{ parent() }}
+
+
+{{ render(controller('CLMMfrBundle:Default:mfrmenu')) }}
+	<div class="col-sm-10">
+		Id: {{ mfrid }}
+		</br>
+		Manufacturer: {{ mfrname }}
+		</br>
+		Description:  {{ description }}
+		</br>
+		Website:      <a href="{{ website }}">{{ website }}</a>
+		</br>
+		Contact Number:  {{ contactNumber }}
+		</br>
+		Recovery Number: {{ recoveryTelNumber }}
+		</br>
+		Logo:  {{ logoPath }}
+		</br>
+		</div>
+{% endblock %}

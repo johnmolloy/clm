@@ -6,10 +6,22 @@ clm_mfr_homepage:
     pattern:  /cars/{mfrname}
     defaults: { _controller: CLMMfrBundle:Default:index }
 
+clm_model_homepage:
+    pattern:  /cars/{mfrname}/{model}
+    defaults: { _controller: CLMMfrBundle:Default:model }
+
 clm_create_mfr:
     pattern:  /createmfr
     defaults: { _controller: CLMMfrBundle:Default:create }
 
+clm_create_model:
+    pattern:  /createmodel
+    defaults: { _controller: CLMMfrBundle:Default:createModel }
+
 clm_mfr_menu:
     pattern:  /mfrmenu
     defaults: { _controller: CLMMfrBundle:Default:mfrmenu }
+
+clm_model_menu:
+    pattern:  /modelmenu/{mfrname}
+    defaults: { _controller: CLMMfrBundle:Default:modelmenu }
