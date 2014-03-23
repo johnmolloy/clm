@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+	{{ parent() }}
+
+	{{ render(controller('CLMMfrBundle:Default:mfrmenu')) }}
+
+	<div class="col-sm-10">
+		
+		<p><a href="{{ path('clm_mfr_information', {'mfrname': mfrname}) }}">{{ mfrname }} Information</a></p>
+		
+		{{ render(controller('CLMMfrBundle:Default:modelMenu', { mfrname: mfrname })) }}
+		
+		
+	</div>
+{% endblock %}

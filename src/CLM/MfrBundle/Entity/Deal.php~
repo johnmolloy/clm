@@ -1,0 +1,152 @@
+<?php
+
+namespace CLM\MfrBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Deal
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="CLM\MfrBundle\Entity\DealRepository")
+ */
+class Deal
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=60)
+     */
+    private $name;
+
+    /**
+	 * @ORM\ManyToOne(targetEntity="Model")
+     */
+    private $modelID;
+	
+    /**
+	 * @ORM\ManyToOne(targetEntity="Broker")
+     */
+    private $brokerID;
+	
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mfrName", type="string", length=60)
+     */
+    private $mfrName;
+	
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="modelName", type="string", length=60)
+     */
+    private $modelName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="profile", type="string", length=5)
+     */
+    private $profile;
+	
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="initialRental", type="integer")
+     */
+    private $initialRental;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="contractLength", type="integer")
+     */
+    private $contractLength;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="mileage", type="integer")
+     */
+    private $mileage;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="maintenance", type="integer")
+     */
+    private $maintenance;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="personal", type="integer")
+     */
+    private $personal;	
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="leadTime", type="integer")
+     */
+    private $leadTime;
+
+    /**
+     * @var decimal
+     *
+     * @ORM\Column(name="dealPrice", type="decimal", scale=2)
+     */
+    private $dealPrice;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="dealURL", type="string", length=200)
+     */
+    private $dealURL;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="views", type="integer")
+     */
+    private $views;
+	
+    /**
+     * @var datetime
+     *
+     * @ORM\Column(name="dateAdded", type="datetime")
+     */
+    private $dateAdded;
+	
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="persist", type="boolean")
+     */
+    private $persist;
+	
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="picturePath", type="string", length=200)
+     */
+    private $picturePath;
+}

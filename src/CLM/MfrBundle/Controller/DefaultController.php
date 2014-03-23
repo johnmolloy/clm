@@ -10,9 +10,14 @@ use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
-    public function indexAction($mfrname)
+    public function indexAction()
     {
-        return $this->render('CLMMfrBundle:Default:index.html.twig', array('mfrname' => $mfrname));
+        return $this->render('CLMMfrBundle:Default:index.html.twig');
+    }
+    
+	public function mfrindexAction($mfrname)
+    {
+        return $this->render('CLMMfrBundle:Default:mfrindex.html.twig', array('mfrname' => $mfrname));
     }
 	
     public function modelAction($mfrname, $model)

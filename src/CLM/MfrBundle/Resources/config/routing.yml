@@ -1,10 +1,14 @@
+clm_home:
+    pattern:  /
+    defaults: { _controller: CLMMfrBundle:Default:index }
+
 clm_mfr_information:
     pattern:  /cars/{mfrname}/information
     defaults: { _controller: CLMMfrBundle:Default:mfrInformation }
 
 clm_mfr_homepage:
     pattern:  /cars/{mfrname}
-    defaults: { _controller: CLMMfrBundle:Default:index }
+    defaults: { _controller: CLMMfrBundle:Default:mfrindex }
 
 clm_model_homepage:
     pattern:  /cars/{mfrname}/{model}

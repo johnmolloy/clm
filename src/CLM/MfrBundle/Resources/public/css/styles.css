@@ -1,0 +1,50 @@
+.navbar-default {
+  background-color: #4DB8FF;
+  border-color: #0099FF;
+  color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>$
+  background-color: #66C2FF;
+  color: #FFFFFF;
+}
+
+.navbar-default .navbar-brand  {
+        color: #F0F0F0;
+}
+
+.navbar-default .navbar-nav>li>a{
+        color: #F0F0F0;
+}
+
+.manufacturerNav>.nav>li>a{
+padding: 0px 15px;
+}
+
+ul.paging-bottom{
+        clear:both;
+}
+
+a:hover{
+    text-decoration:underline;
+    padding-bottom: 1px;
+}
+
+.price{
+        font-weight: bold;
+        font-size: 140%;
+}
+
+.billing-period {
+        font-size: 75%;
+}
+
+.broker{
+        font-size: 75%;
+        text-align: right;
+        padding-right: 20px;
+}
+
+.mileage-period{
+        font-size: 75%;
+}
